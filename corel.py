@@ -31,7 +31,8 @@ def predict_facies(path_to_core_image, path_to_model):
   import matplotlib.pyplot as plt  
   import ultralytics
   ultralytics.checks()
-
+  from ultralytics import YOLO
+  
   model1 = YOLO(path_to_model)
   result = model1.predict(source=path_to_core_image, 
                  imgsz=640, iou=.3, save=True, 
