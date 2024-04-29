@@ -1,5 +1,7 @@
 # Corel
 
+<img src="https://github.com/yohanesnuwara/corel/assets/51282928/5403fb5c-74f7-499f-9bca-4b97eeb214cb" alt="Alt Text" width="400px">
+
 Corel is a smart computer vision model that identifies facies and performs rock typing on core images. It is based on YOLOv8-Segmentation model that is trained to classify different facies and sedimentary features from core images. The facies include:
 * Bioturbated mudstone/sandstone
 * Massive mudstone/sandstone
