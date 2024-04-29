@@ -36,7 +36,7 @@ def predict_facies(path_to_core_image, path_to_model):
   model1 = YOLO(path_to_model)
   result = model1.predict(source=path_to_core_image, 
                  imgsz=640, iou=.3, save=True, 
-                 save_txt=True, save_conf=True, show_labels=False)  
+                 save_txt=True, save_conf=True, show_labels=True)  
   
   # Visualize result
   for i in range(len(result)):
