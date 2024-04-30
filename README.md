@@ -39,5 +39,6 @@ Current average F1-score for all facies is 0.654. The matrix confusion is as fol
 <img src="https://github.com/yohanesnuwara/corel/assets/51282928/eb2b10fd-e92f-4522-8125-7b7eea1ffd03" alt="Alt Text" width="700px">
 
 ### Future improvement
-1. Implementation of data architecture in cloud (in context of core image stream / almost realtime)
-2. Improvement on class accuracy for all sedimentary facies
+1. Depth information added to the computer vision model such as using named entity recognition to recognize the depth figures on core image
+2. Implementation of data architecture in cloud (in context of core image stream / almost realtime)
+3. Improvement on class accuracy for all sedimentary facies
