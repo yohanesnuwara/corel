@@ -5,13 +5,19 @@ def setup():
   pip_install('azure-storage-blob')
   pip_install('ultralytics')  
 
-def download_model():
+def download_model(select_model=None):
   from azure.storage.blob import BlobServiceClient
   
   # Define your Azure Storage account credentials
   connection_string = "DefaultEndpointsProtocol=https;AccountName=geodata059;AccountKey=gVk2/U/8lqbFfIGSrDBlwzPQMJOyzLNil6ySE2p5E8Mol+TeUHl5h9hJDe5In1fgDNGMcHpW+91c+AStLGPMqg==;EndpointSuffix=core.windows.net"
   container_name = "core"
-  blob_name = "best (5).pt"
+
+  if select_model=='yolo8-basic':
+    blob_name = "facies-seg-yolo8.pt"
+  if select_model=='yolo11-basic':
+    blob_name = "facies-seg-yolo11.pt"
+  else:
+    blob_name = "best (5).pt"    
   
   # Create a BlobServiceClient using the connection string
   blob_service_client = BlobServiceClient.from_connection_string(connection_string)
@@ -23,7 +29,7 @@ def download_model():
   blob_client = container_client.get_blob_client(blob_name)
   
   # Download the blob data to a local file
-  with open("best (5).pt", "wb") as f:
+  with open(blob_name, "wb") as f:
       data = blob_client.download_blob()
       data.readinto(f)
 
